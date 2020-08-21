@@ -3,9 +3,18 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    #loop
+    POO = []
+    for current_number in range(len(arr)):
+        product_total = 1
+        for index in range(len(arr)):
+            if index != current_number:
+                product_total = arr[index]*product_total
+        POO.append(product_total)
+    return POO
 
-    pass
+
+
 
 
 if __name__ == '__main__':
